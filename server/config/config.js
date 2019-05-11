@@ -41,5 +41,10 @@ if( process.env.NODE_ENV === 'dev' ){
     urlDB = process.env.MONGO_URI; //Esta es la variable que envia heroku (se tiene que declarar en heroku)
 }
 
-
 process.env.URLDB = urlDB;
+
+
+// =========================
+// Google client-Id
+// ==========================
+process.env.CLIENT_ID = process.env.CLIENT_ID || '459420246935-mh3uknmdplnpe9brnqjoilu8qnu6n9kt.apps.googleusercontent.com';
