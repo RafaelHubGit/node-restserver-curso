@@ -56,4 +56,7 @@ usuarioSchema.methods.toJSON = function() {
 
 usuarioSchema.plugin( uniqueValidator, { message: '{PATH} debe de ser único' });
 
+
+//Sabe en que coleccion guardar la info por que al establecer en mongoose.model l pablar 'Usuario',
+//la convierte a minusculas y le agrega una s y esa es la coleccion que utilizara
 module.exports = mongoose.model( 'Usuario', usuarioSchema );
