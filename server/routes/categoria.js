@@ -14,8 +14,8 @@ let Categoria = require('../models/categoria');
 app.get( '/categoria', verificaToken ,(req, res) => {
 
     Categoria.find({})
-        .sort('descripcion')
-        .populate('usuario', 'nombre email')
+        .sort('descripcion') //es para ordenarlo por descripcion
+        .populate('usuario', 'nombre email') //hace una consulta a la coleccion usuario y pone los campos nombre y email
         .exec( (err, categorias) => {
 
             if( err ){
